@@ -1,3 +1,5 @@
+"use strict"
+
 /* eslint-disable no-console */
 const AWS_XRAY = require('aws-xray-sdk');
 
@@ -38,4 +40,4 @@ const FAKE_XRAY = {
   SegmentUtils: {}
 };
 
-module.exports = parseInt(process.env.AWS_XRAY) ? AWS_XRAY : FAKE_XRAY;
+exports.default = parseInt(process.env.AWS_XRAY) ? AWS_XRAY : FAKE_XRAY;
