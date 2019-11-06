@@ -7,8 +7,8 @@ const FAKE_XRAY = {
   plugins: {},
   config: () => {},
   express: {
-    openSegment: () => {},
-    closeSegment: () => {}
+    openSegment: (_, _, next) => next(),
+    closeSegment: (_, _, next) => next()
   },
   captureAWS: (capture) => capture,
   getSegment: () => {},
@@ -40,4 +40,4 @@ const FAKE_XRAY = {
   SegmentUtils: {}
 };
 
-module.exports = FAKE_XRAY; //parseInt(process.env.AWS_XRAY) ? AWS_XRAY : 
+module.exports = parseInt(process.env.AWS_XRAY) ? AWS_XRAY : FAKE_XRAY;
