@@ -7,8 +7,8 @@ const FAKE_XRAY = {
   plugins: {},
   config: () => {},
   express: {
-    openSegment: (_, _, next) => next(),
-    closeSegment: (_, _, next) => next()
+    openSegment: (req, res, next) => next(),
+    closeSegment: (req, res, next) => next()
   },
   captureAWS: (capture) => capture,
   getSegment: () => {},
