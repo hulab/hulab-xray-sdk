@@ -1,0 +1,30 @@
+{
+  "name": "hulab-xray-sdk",
+  "version": "1.0.0",
+  "description": "Wrapper around aws-xray-sdk",
+  "author": "Hulab SAS",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hulab/hulab-xray-sdk"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-ejs-js": "0.1.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "nodemon": "~1.17.x"
+  },
+  "dependencies": {
+    "aws-xray-sdk": "^2.4.0-experimental.1",
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint --cache ./",
+    "dev": "nodemon -r dotenv/config --inspect index.js"
+  },
+  "engines": {
+    "node": ">=8.8.1"
+  }
+}
