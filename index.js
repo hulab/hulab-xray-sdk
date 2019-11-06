@@ -38,4 +38,4 @@ const FAKE_XRAY = {
   SegmentUtils: {}
 };
 
-exports.module = parseInt(process.env.AWS_XRAY) ? AWS_XRAY : FAKE_XRAY;
+exports = parseInt(process.env.AWS_XRAY) ? AWS_XRAY : FAKE_XRAY;
